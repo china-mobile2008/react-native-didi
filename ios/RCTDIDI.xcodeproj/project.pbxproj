@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27A742261F723D51003B951C /* RCTDIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A742251F723D51003B951C /* RCTDIDI.m */; };
+		27A742271F723D51003B951C /* RCTDIDI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A742241F723D51003B951C /* RCTDIDI.h */; };
+		27A7423A1F7240C0003B951C /* DIOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A742361F7240C0003B951C /* DIOpenSDK.a */; };
+		27A7423D1F7241B9003B951C /* DIOpenSDK.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A7423C1F7241B9003B951C /* DIOpenSDK.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27A7421F1F723D51003B951C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				27A742271F723D51003B951C /* RCTDIDI.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A7423B1F7241A7003B951C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				27A7423D1F7241B9003B951C /* DIOpenSDK.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27A742211F723D51003B951C /* libRCTDIDI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTDIDI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A742241F723D51003B951C /* RCTDIDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTDIDI.h; sourceTree = "<group>"; };
+		27A742251F723D51003B951C /* RCTDIDI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTDIDI.m; sourceTree = "<group>"; };
+		27A742351F7240C0003B951C /* DiBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiBaseModel.h; sourceTree = "<group>"; };
+		27A742361F7240C0003B951C /* DIOpenSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = DIOpenSDK.a; sourceTree = "<group>"; };
+		27A742371F7240C0003B951C /* DIOpenSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIOpenSDK.h; sourceTree = "<group>"; };
+		27A742381F7240C0003B951C /* DIOpenSDKRegisterOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIOpenSDKRegisterOptions.h; sourceTree = "<group>"; };
+		27A742391F7240C0003B951C /* DITopNavigationTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DITopNavigationTheme.h; sourceTree = "<group>"; };
+		27A7423C1F7241B9003B951C /* DIOpenSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DIOpenSDK.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27A7421E1F723D51003B951C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A7423A1F7240C0003B951C /* DIOpenSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27A742181F723D51003B951C = {
+			isa = PBXGroup;
+			children = (
+				27A7423C1F7241B9003B951C /* DIOpenSDK.bundle */,
+				27A742341F7240C0003B951C /* DIOpenSDK */,
+				27A742231F723D51003B951C /* RCTDIDI */,
+				27A742221F723D51003B951C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27A742221F723D51003B951C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A742211F723D51003B951C /* libRCTDIDI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27A742231F723D51003B951C /* RCTDIDI */ = {
+			isa = PBXGroup;
+			children = (
+				27A742241F723D51003B951C /* RCTDIDI.h */,
+				27A742251F723D51003B951C /* RCTDIDI.m */,
+			);
+			path = RCTDIDI;
+			sourceTree = "<group>";
+		};
+		27A742341F7240C0003B951C /* DIOpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				27A742351F7240C0003B951C /* DiBaseModel.h */,
+				27A742361F7240C0003B951C /* DIOpenSDK.a */,
+				27A742371F7240C0003B951C /* DIOpenSDK.h */,
+				27A742381F7240C0003B951C /* DIOpenSDKRegisterOptions.h */,
+				27A742391F7240C0003B951C /* DITopNavigationTheme.h */,
+			);
+			path = DIOpenSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27A742201F723D51003B951C /* RCTDIDI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A7422A1F723D51003B951C /* Build configuration list for PBXNativeTarget "RCTDIDI" */;
+			buildPhases = (
+				27A7421D1F723D51003B951C /* Sources */,
+				27A7421E1F723D51003B951C /* Frameworks */,
+				27A7421F1F723D51003B951C /* CopyFiles */,
+				27A7423B1F7241A7003B951C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTDIDI;
+			productName = RCTDIDI;
+			productReference = 27A742211F723D51003B951C /* libRCTDIDI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27A742191F723D51003B951C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "china-mobile2008";
+				TargetAttributes = {
+					27A742201F723D51003B951C = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 32K538S56K;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 27A7421C1F723D51003B951C /* Build configuration list for PBXProject "RCTDIDI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27A742181F723D51003B951C;
+			productRefGroup = 27A742221F723D51003B951C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A742201F723D51003B951C /* RCTDIDI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A7421D1F723D51003B951C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A742261F723D51003B951C /* RCTDIDI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		27A742281F723D51003B951C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27A742291F723D51003B951C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27A7422B1F723D51003B951C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 32K538S56K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../React",
+					"$(SRCROOT)/../react-native/React",
+					"$(SRCROOT)/../node_modules/react-native/React",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/Image",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DIOpenSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		27A7422C1F723D51003B951C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 32K538S56K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../React",
+					"$(SRCROOT)/../react-native/React",
+					"$(SRCROOT)/../node_modules/react-native/React",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/Image",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DIOpenSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A7421C1F723D51003B951C /* Build configuration list for PBXProject "RCTDIDI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A742281F723D51003B951C /* Debug */,
+				27A742291F723D51003B951C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A7422A1F723D51003B951C /* Build configuration list for PBXNativeTarget "RCTDIDI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A7422B1F723D51003B951C /* Debug */,
+				27A7422C1F723D51003B951C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27A742191F723D51003B951C /* Project object */;
+}
