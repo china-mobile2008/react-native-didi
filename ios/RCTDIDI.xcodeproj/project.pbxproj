@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27707F441F73467200E730F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27707F431F73467200E730F6 /* CoreGraphics.framework */; };
+		27707F461F73467900E730F6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27707F451F73467900E730F6 /* CoreLocation.framework */; };
+		27707F481F73467F00E730F6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27707F471F73467F00E730F6 /* ImageIO.framework */; };
+		27707F4A1F73468500E730F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27707F491F73468500E730F6 /* SystemConfiguration.framework */; };
 		27A742261F723D51003B951C /* RCTDIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A742251F723D51003B951C /* RCTDIDI.m */; };
 		27A742271F723D51003B951C /* RCTDIDI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A742241F723D51003B951C /* RCTDIDI.h */; };
 		27A7423A1F7240C0003B951C /* DIOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A742361F7240C0003B951C /* DIOpenSDK.a */; };
@@ -37,6 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27707F431F73467200E730F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		27707F451F73467900E730F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27707F471F73467F00E730F6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		27707F491F73468500E730F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		27A742211F723D51003B951C /* libRCTDIDI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTDIDI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A742241F723D51003B951C /* RCTDIDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTDIDI.h; sourceTree = "<group>"; };
 		27A742251F723D51003B951C /* RCTDIDI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTDIDI.m; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27707F4A1F73468500E730F6 /* SystemConfiguration.framework in Frameworks */,
+				27707F481F73467F00E730F6 /* ImageIO.framework in Frameworks */,
+				27707F461F73467900E730F6 /* CoreLocation.framework in Frameworks */,
+				27707F441F73467200E730F6 /* CoreGraphics.framework in Frameworks */,
 				27A7423A1F7240C0003B951C /* DIOpenSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27707F421F73467200E730F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27707F491F73468500E730F6 /* SystemConfiguration.framework */,
+				27707F471F73467F00E730F6 /* ImageIO.framework */,
+				27707F451F73467900E730F6 /* CoreLocation.framework */,
+				27707F431F73467200E730F6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		27A742181F723D51003B951C = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +90,7 @@
 				27A742341F7240C0003B951C /* DIOpenSDK */,
 				27A742231F723D51003B951C /* RCTDIDI */,
 				27A742221F723D51003B951C /* Products */,
+				27707F421F73467200E730F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
