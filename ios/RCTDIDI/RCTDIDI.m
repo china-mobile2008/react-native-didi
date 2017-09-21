@@ -22,13 +22,13 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(registerApp:(NSString *)appid
-                  :(NSString*)secret
-                  :(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(registerApp:(NSString *)appId andSecret:(NSString *)secret callback:(RCTResponseSenderBlock)callback)
 {
-    self.appId = appid;
+    self.appId = appId;
     self.secret = secret;
-    callback(@[[DIOpenSDK registerApp:appid secret:secret]]);
+    [DIOpenSDK registerApp:appId secret:secret];
+    BOOL isSuccess = TRUE;
+    callback(@[isSuccess?@"true":@"false"]);
 }
 
 RCT_EXPORT_METHOD(showDDPage:(UIViewController *)parentController
@@ -37,36 +37,36 @@ RCT_EXPORT_METHOD(showDDPage:(UIViewController *)parentController
                   :(id<DIOpenSDKDelegate>)delegate
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK showDDPage:parentController
+    [DIOpenSDK showDDPage:parentController
                             animated:animated
                               params:optionParams
-                            delegate:delegate]]);
+                            delegate:delegate];
+    callback(@[[NSNull null], @"showDDPage success!"]);
 }
 
 RCT_EXPORT_METHOD(callPhone:(NSString *)phone
-                  :(BOOL)prompt
-                  :(NSError *__autoreleasing *)error
-                  :(RCTResponseSenderBlock)callback)
+                  andPrompt:(BOOL)prompt
+                  callback:(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK callPhone:phone
-                             prompt:prompt
-                              error:error]]);
+    [DIOpenSDK callPhone:phone prompt:prompt error:nil];
+    BOOL isSuccess = TRUE;
+    callback(@[isSuccess?@"true":@"false"]);
 }
 
 RCT_EXPORT_METHOD(asyncGetTicket:(NSString *)ticketType
                   :(void (^)(NSError *error,DIBaseModel *model))resultBlock
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK asyncGetTicket:ticketType
-                             resultBlock:resultBlock]]);
+    [DIOpenSDK asyncGetTicket:ticketType resultBlock:resultBlock];
+    callback(@[[NSNull null], @"asyncGetTicket success!"]);
 }
 
 RCT_EXPORT_METHOD(syncGetTicket:(NSString *)ticketType
                   :(NSError *__autoreleasing *)resultError
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK syncGetTicket:ticketType
-                            resultError:resultError]]);
+    [DIOpenSDK syncGetTicket:ticketType error:resultError];
+    callback(@[[NSNull null], @"syncGetTicket success!"]);
 }
 
 RCT_EXPORT_METHOD(openPage:(NSString *)pageName
@@ -75,10 +75,8 @@ RCT_EXPORT_METHOD(openPage:(NSString *)pageName
                   :(void (^)(NSError *error,UIViewController *viewController))resultBlock
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK openPage:pageName
-                            params:params
-                          navTheme:navTheme
-                       resultBlock:resultBlock]]);
+    [DIOpenSDK openPage:pageName params:params navTheme:navTheme resultBlock:resultBlock];
+    callback(@[[NSNull null], @"openPage success!"]);
 }
 
 RCT_EXPORT_METHOD(asyncCallOpenAPI:(NSString *)apiName
@@ -86,9 +84,8 @@ RCT_EXPORT_METHOD(asyncCallOpenAPI:(NSString *)apiName
                   :(void (^)(NSError *error,DIBaseModel *model))resultBlock
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK asyncCallOpenAPI:apiName
-                                    params:dict
-                               resultBlock:resultBlock]]);
+    [DIOpenSDK asyncCallOpenAPI:apiName params:dict resultBlock:resultBlock];
+    callback(@[[NSNull null], @"asyncCAllOpenAPI success!"]);
 }
 
 RCT_EXPORT_METHOD(syncCallOpenAPI:(NSString *)apiName
@@ -96,13 +93,29 @@ RCT_EXPORT_METHOD(syncCallOpenAPI:(NSString *)apiName
                   :(NSError *__autoreleasing *)resultError
                   :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK syncCallOpenAPI:apiName 
-                                   params:dict
-                              resultError:resultError]]);
+    [DIOpenSDK syncCallOpenAPI:apiName params:dict error:resultError];
+    callback(@[[NSNull null], @"syncCallOpenAPI success!"]);
 }
 
 RCT_EXPORT_METHOD(checkLogin :(RCTResponseSenderBlock)callback)
 {
-    callback(@[[DIOpenSDK checkLogin]]);
+    //callback(@[[NSNull null], [DIOpenSDK checkLogin] ? [NSNull null] : INVOKE_FAILED]);
 }
+
+RCT_EXPORT_METHOD(sendFeedbackMessage:(NSInteger)actionId andTaskId:(NSString *)taskId andMsgId:(NSString *)msgId callback:(RCTResponseSenderBlock)callback)
+{
+    BOOL isSuccess = TRUE;
+    callback(@[isSuccess?@"true":@"false"]);
+}
+
+// 打车页面关闭回调
+- (void)diopensdkMainPageClose
+{
+    //[self.bridge.eventDispatcher sendDeviceEventWithName:@"RCTDIOpenPageClose" body:@{@"appid":self.appId, @"code" :self.secret}];
+}
+
+// - (DITopNavigationTheme *)diopensdkTopNavigationTheme
+// {
+//     [self.bridge.eventDispatcher sendDeviceEventWithName:@"RCTDIOpenNavTheme" body:@{@"appid":self.appId, @"code" :self.secret}];
+// }
 @end

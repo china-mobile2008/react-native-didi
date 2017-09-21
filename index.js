@@ -63,7 +63,7 @@ function wrapApi(nativeFunc) {
  *  @param appId  开发者网站申请的appid
  *  @param secret 开发者网站申请的secret
  */
-export const registerApp = wrapRegisterApp(DIDI.registerApp);
+export const registerApp = (DIDI.registerApp);
 
 /**
  *  通过该方法调起滴滴页面
@@ -73,7 +73,7 @@ export const registerApp = wrapRegisterApp(DIDI.registerApp);
  *  @param optionParams     可选参数
  *  @param delegate         代理
  */
-export const showDDPage = wrapRegisterApp(DIDI.showDDPage);
+export const showDDPage = wrapApi(DIDI.showDDPage);
 
 /**
 *  拨打手机号码
@@ -82,7 +82,7 @@ export const showDDPage = wrapRegisterApp(DIDI.showDDPage);
 *  @param prompt 拨打电话是否弹出提示
 *  @param error  错误信息
 */
-export const callPhone = wrapRegisterApp(DIDI.callPhone);
+export const callPhone = (DIDI.callPhone);
 
 /**
 *  异步获取ticket
@@ -90,7 +90,7 @@ export const callPhone = wrapRegisterApp(DIDI.callPhone);
 *  @param ticketType  ticketType分为single和long两种，single类型每次请求完就失效，long类型有一定失效周期。
 *  @param resultBlock 结果回调
 */
-export const asyncGetTicket = wrapRegisterApp(DIDI.asyncGetTicket);
+export const asyncGetTicket = wrapApi(DIDI.asyncGetTicket);
 
 /**
 *  同步获取ticket
@@ -100,7 +100,7 @@ export const asyncGetTicket = wrapRegisterApp(DIDI.asyncGetTicket);
 *
 *  @return 返回结果数据
 */
-export const syncGetTicket = wrapRegisterApp(DIDI.syncGetTicket);
+export const syncGetTicket = wrapApi(DIDI.syncGetTicket);
 
 /**
 *  打开制定页面
@@ -110,7 +110,7 @@ export const syncGetTicket = wrapRegisterApp(DIDI.syncGetTicket);
 *  @param navTheme    页面导航栏定制
 *  @param resultBlock 结果回调,回调中返回页面的viewController
 */
-export const openPage = wrapRegisterApp(DIDI.openPage);
+export const openPage = wrapApi(DIDI.openPage);
 
 /**
 *  异步请求开放API接口
@@ -119,7 +119,7 @@ export const openPage = wrapRegisterApp(DIDI.openPage);
 *  @param dict        API所需参数
 *  @param resultBlock 结果回调
 */
-export const asyncCallOpenAPI = wrapRegisterApp(DIDI.asyncCallOpenAPI);
+export const asyncCallOpenAPI = wrapApi(DIDI.asyncCallOpenAPI);
 
 /**
 *  同步请求开放API接口
@@ -130,11 +130,12 @@ export const asyncCallOpenAPI = wrapRegisterApp(DIDI.asyncCallOpenAPI);
 *
 *  @return 返回结果数据
 */
-export const syncCallOpenAPI = wrapRegisterApp(DIDI.syncCallOpenAPI);
+export const syncCallOpenAPI = wrapApi(DIDI.syncCallOpenAPI);
 
 /**
 *  检查打车主页是否登陆
 *
 *  @return 已登录返回YES,未登录返回NO
 */
-export const checkLogin = wrapRegisterApp(DIDI.checkLogin);
+export const checkLogin = wrapApi(DIDI.checkLogin);
+export const sendFeedbackMessage = (DIDI.sendFeedbackMessage);
