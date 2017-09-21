@@ -265,10 +265,8 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../React",
 					"$(SRCROOT)/../react-native/React",
-					"$(SRCROOT)/../node_modules/react-native/React",
-					"$(SRCROOT)/../node_modules/react-native/Libraries/Image",
+					"$(SRCROOT)/../node_modules/react-native/Libraries",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,10 +288,8 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../React",
 					"$(SRCROOT)/../react-native/React",
-					"$(SRCROOT)/../node_modules/react-native/React",
-					"$(SRCROOT)/../node_modules/react-native/Libraries/Image",
+					"$(SRCROOT)/../node_modules/react-native/Libraries",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,6 +320,7 @@
 				27A7422C1F723D51003B951C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
